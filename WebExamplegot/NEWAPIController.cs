@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 
 namespace WebExamplegot
 {
-    [Route("api/[controller]")]
+    [Route("api/NEWAPI")]
     [ApiController]
     public class NEWAPIController : ControllerBase
     {
+        [HttpGet]
+        [Route("/api/NEWAPI/ShowElements")]
+        public string[] ShowElements()
+        {
+            return new string[] { "Earth", "Water", "Air", "Fire" };
+        }
     }
 }

@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    [Route("api/Test")]
-    [ApiController]
     public class HomeController : Controller
     {
-        
-        [HttpGet]
-        [Route("/api/Test/Showgrp")]
-        public string[] ShowGRP()
+        public IActionResult Index()
         {
-            return new string[] { "Aditya","Deepika","Ashish","Shubham"};
+            return View();
         }
     }
 }
